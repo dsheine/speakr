@@ -1,10 +1,12 @@
 const CACHE_NAME = 'Speakr-cache-v4';
 const ASSETS_TO_CACHE = [
   '/',
+  '/record',
   '/static/offline.html',
   '/static/manifest.json',
   '/static/css/styles.css',
   '/static/js/app.modular.js',
+  '/static/js/record.js',
   '/static/js/i18n.js',
   '/static/js/csrf-refresh.js',
   '/static/img/icon-192x192.png',

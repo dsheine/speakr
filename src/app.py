@@ -730,6 +730,7 @@ from src.api.push_notifications import push_bp
 from src.api.api_v1 import api_v1_bp, init_api_v1_helpers
 from src.api.recording_sessions import recording_sessions_bp
 from src.api.webhooks import webhooks_bp
+from src.api.simple_record import simple_record_bp
 
 # Database initialization (extracted to src/init_db.py)
 from src.init_db import initialize_database
@@ -789,6 +790,7 @@ app.register_blueprint(recording_sessions_bp)
 # X-CSRFToken header for cookie-auth requests.
 app.register_blueprint(webhooks_bp)
 csrf.exempt(webhooks_bp)
+app.register_blueprint(simple_record_bp)
 
 # PWA Web Share Target (issue #285): the native share sheet cannot round-trip
 # a CSRF token, so the share-target endpoint is exempted. Authentication still
